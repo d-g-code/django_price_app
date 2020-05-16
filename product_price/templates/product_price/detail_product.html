@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Price Detail</title>
+</head>
+<body>
+    <h1>Price</h1>
+    {% if product %}
+        {% for p in product.price_set.all %}
+            <ul>
+                <li>{{ p.price }} {{ p.store}}</li>
+            </ul>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'product_price:index_product' %}">Home</a>
+</body>
+</html>
