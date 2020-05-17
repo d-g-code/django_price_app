@@ -5,7 +5,7 @@ from .forms import AddProductForms
 
 
 def index_product(request):
-    all_products = Product.objects.all()
+    all_products = Product.objects.order_by('name')
     return render(request, 'product_price/product.html', {'all_products': all_products})
 
 

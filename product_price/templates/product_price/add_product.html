@@ -6,6 +6,9 @@
 </head>
 <body>
     <h1>Add Product</h1>
+    <a href="{% url 'product_price:index_product' %}">Home</a>
+    <br>
+    <br>
     <form method="POST">
         {% csrf_token %}
         {{ form }}
