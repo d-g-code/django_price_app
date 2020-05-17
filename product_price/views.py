@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Product
 from django.contrib.auth.forms import UserCreationForm
 from .forms import AddProductForms
+from django.contrib import messages
 
 
 def index_product(request):
@@ -25,7 +26,8 @@ def add_product(request):
     if form.is_valid():
         form.save()
         form = AddProductForms()
-
+        messages.success(request, f'Artykuł dodany')
         return render(request, 'product_price/add_product.html', {'form': form})
+
     return render(request, 'product_price/add_product.html', {'form': form})
 

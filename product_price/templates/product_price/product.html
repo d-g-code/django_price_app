@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "product_price/layout.html" %}
+
     <title>Index_info</title>
-</head>
-<body>
-    <a href="{% url 'product_price:add_product' %}">Add Product</a>
-    <br>
-    <br>
+
+{% block content %}
+
     {% if all_products %}
         {% for product in all_products %}
             {{ product }} {{ product.price }} {{ product.store }}<br/>
         {% endfor %}
     {% endif %}
-</body>
-</html>
+
+{% endblock content %}
