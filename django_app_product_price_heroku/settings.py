@@ -127,3 +127,4 @@ LOGIN_REDIRECT_URL = 'product_price:index_product'
 LOGIN_URL = 'product_price:login'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
