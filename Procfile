@@ -1,0 +1,1 @@
+web: gunicorn app_on_heroku_django_product_price.wsgi
