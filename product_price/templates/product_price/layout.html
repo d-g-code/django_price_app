@@ -10,21 +10,17 @@
 <body>
 
         {% if user.is_authenticated %}
-            <div  class="link-log-in">
+            <div  class="nav">
             <a href="{% url 'product_price:add_product' %}">Dodaj Produkt</a>
             <a href="{% url 'product_price:logout' %}">Wyloguj</a>
             </div>
             {% block content %}{% endblock%}
 
         {% else %}
-            <ul class="links-log">
-                <li>
-                    <a href="{% url 'product_price:login' %}">Zaloguj</a>
-                </li>
-                <li>
-                    <a href="{% url 'product_price:signup' %}">Rejestracja</a>
-                </li>
-            </ul>
+            <div class="nav">
+                <a href="{% url 'product_price:login' %}">Zaloguj</a>
+                <a href="{% url 'product_price:signup' %}">Rejestracja</a>
+            </div>
         {% endif %}
 
 
