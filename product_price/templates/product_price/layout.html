@@ -1,27 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'product_price/style.css' %}">
 </head>
 <body>
 
         {% if user.is_authenticated %}
-            <h1>Witaj w serwisie :)</h1>
-            <h2>{{ user }}</h2>
+            <div  class="link-log-in">
             <a href="{% url 'product_price:add_product' %}">Dodaj Produkt</a>
-            <br>
-            <a href="{% url 'product_price:logout' %}">Logout</a>
-            <br>
-            <br>
-            {% block content %}{% endblock%}
-
+            <a href="{% url 'product_price:logout' %}">Wyloguj</a>
+            </div>
         {% else %}
-            <h1>Aby skorzystać z serwisu zaloguj się lub zarejestruj</h1>
-            <a href="{% url 'product_price:login' %}">Login</a>
-            <a href="{% url 'product_price:signup' %}">Register</a>
+            <ul class="links-log">
+                <li>
+                    <a href="{% url 'product_price:login' %}">Zaloguj</a>
+                </li>
+                <li>
+                    <a href="{% url 'product_price:signup' %}">Rejestracja</a>
+                </li>
+            </ul>
         {% endif %}
 
+        {% block content %}{% endblock%}
 
 
 </body>
