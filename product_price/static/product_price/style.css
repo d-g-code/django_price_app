@@ -1,8 +1,16 @@
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   * {
   box-sizing: border-box;
   }
   body {
     background: #bdc;
+  }
+}
+@media (max-width: 800px) {
+  * {
+  box-sizing: border-box;
+  }
+  body {
+    background: #ddc;
   }
 }
