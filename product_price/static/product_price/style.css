@@ -1,24 +1,9 @@
-@media (max-width: 1000px) {
-  * {
-  box-sizing: border-box;
-  }
-  body {
-      background: #bdc;
-  }
-  .nav {
-  }
-  .nav a{
-    position: relative;
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
-    font-size: 60px;
-    border: 1px solid black;
-    margin-left: 90px;
-    }
-  }
+html {
+    font-size: 1.125em;
 }
-
+body {
+    color: #33363C;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
