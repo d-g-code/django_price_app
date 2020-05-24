@@ -1,8 +1,20 @@
-html {
-    font-size: 4em;
-}
 body {
     color: #33363C;
     margin: 0;
     padding: 0;
 }
+@media (max-width: 1000px) {
+  body {
+    background: #bdc;
+    font-size: 4em;
+  }
+  .nav a{
+    	display: block;
+		padding: 24px;
+		border-bottom: 1px solid rgba( 255, 255, 255, 0.1 );
+		background: #282828;
+		text-transform: uppercase;
+		color: rgba( 255, 255, 255, 0.4 );
+		text-align: center;
+		text-decoration: none;
+  }
