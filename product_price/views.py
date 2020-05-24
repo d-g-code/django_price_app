@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Product
 from django.contrib.auth.forms import UserCreationForm
-from .forms import AddProductForms
+from .forms import AddProductForms, SearchForm, MyUserCreationForm
 from django.contrib import messages
 
 
@@ -31,3 +31,7 @@ def add_product(request):
 
     return render(request, 'product_price/add_product.html', {'form': form})
 
+
+def search_form(request):
+    form = MyUserCreationForm()
+    return render(request, 'product_price/search_form.html', {'form': form})
