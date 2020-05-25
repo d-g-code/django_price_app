@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Product
-from django.contrib.auth.forms import UserCreationForm
-from .forms import AddProductForms
+from .forms import AddProductForms, MyUserCreationForm
 from django.contrib import messages
 
 
@@ -12,12 +11,12 @@ def index_product(request):
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = MyUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             return render(request, 'product_price/product.html')
     else:
-        form = UserCreationForm()
+        form = MyUserCreationForm()
         return render(request, 'product_price/signup.html', {'form': form})
 
 
