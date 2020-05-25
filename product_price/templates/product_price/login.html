@@ -11,9 +11,9 @@
 
     <form method="POST" >
         {% csrf_token %}
-        {{ form.username }}
-        {{ form.password }}
-        <button class="button" type="submit">Login</button>
+            <input id="id_username" type="text" name="username" placeholder="Username">
+            <input id="id_password" type="password" name="password" placeholder="Password">
+            <input class="button" type="submit" name="" value="Login">
     </form>
 
 </body>

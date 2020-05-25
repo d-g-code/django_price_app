@@ -10,12 +10,11 @@
 </head>
 <body>
 
-    <form method="POST" class="input-message">
+    <form method="POST">
         {% csrf_token %}
-        {{ form.username }}
-<!--        placeholder="Your name.."-->
-        {{ form.password1 }}
-        {{ form.password2 }}
+        <input id="id_username" type="text" name="username" placeholder="Username">
+        <input id="id_password1" type="password" name="password1" placeholder="Password">
+        <input id="id_password2" type="password" name="password2" placeholder="Password">
         <input class="button" type="submit" value="Signup">
     </form>
 
