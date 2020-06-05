@@ -48,3 +48,14 @@ body {
     padding: 0px;
     font-size: 1em;
 }
+.product-view {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+}
+table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: inheritce ;
+}
