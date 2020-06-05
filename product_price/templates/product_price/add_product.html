@@ -1,20 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Add Product</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'product_price/style.css' %}">
 
 </head>
 <body>
-    <h1>Add Product</h1>
+
+    <p class="title-product">Add Product</p>
     <a href="{% url 'product_price:index_product' %}">Home</a>
-    <br>
     <br>
 
     <form method="POST">
         {% csrf_token %}
-        {{ form. }}
-        <button type="submit">Add</button>
+
+        <input id="id_name" type="text" name="name" placeholder="Product">
+        <input id="id_price" type="number" name="price" placeholder="Price">
+        <input id="id_store" type="text" name="store" placeholder="Store">
+        <input class="button" type="submit" name="" value="Add Product">
+
     </form>
     <br>
     {% if messages %}

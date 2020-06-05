@@ -26,7 +26,7 @@ SECRET_KEY = 'iwg(kt&1((&bej%6d((_wzrcuv0#$1fmu@u7t2_po!4!*kffys'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,6 +125,7 @@ STATIC_URL = '/static/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'product_price:index_product'
 LOGIN_URL = 'product_price:login'
+
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 

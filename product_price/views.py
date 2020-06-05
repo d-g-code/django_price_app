@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect, reverse
 from .models import Product
 from django.contrib.auth.forms import UserCreationForm
 from .forms import AddProductForms, SearchForm, MyUserCreationForm
@@ -35,3 +35,4 @@ def add_product(request):
 def search_form(request):
     form = MyUserCreationForm()
     return render(request, 'product_price/search_form.html', {'form': form})
+

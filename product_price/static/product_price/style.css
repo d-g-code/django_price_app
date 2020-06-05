@@ -5,7 +5,7 @@ body {
     background: #bdc;
     font-size: 4em;
 }
-#id_username, #id_password, #id_password1, #id_password2{
+#id_username, #id_password, #id_password1, #id_password2, #id_name, #id_price, #id_store{
     width: 90%;
     color: #33363C;
     background: #bbb;
@@ -41,4 +41,21 @@ body {
     text-decoration: none;
     display: block;
     text-align: center;
+}
+.title-product {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+.product-view {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+}
+table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: inheritce ;
 }
