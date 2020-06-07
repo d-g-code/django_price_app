@@ -1,6 +1,7 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+{% load pwa %}
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,12 +9,14 @@
           href="{% static 'product_price/style.css' %}">
 </head>
 <body>
+        {% progressive_web_app_meta %}
 
         {% if user.is_authenticated %}
             <div  class="nav">
             <a href="{% url 'product_price:add_product' %}">Dodaj Produkt</a>
             <a href="{% url 'product_price:logout' %}">Wyloguj</a>
             </div>
+
             {% block content %}{% endblock%}
 
         {% else %}
