@@ -30,3 +30,8 @@ def add_product(request):
         return render(request, 'product_price/add_product.html', {'form': form})
 
     return render(request, 'product_price/add_product.html', {'form': form})
+
+
+
+# https://www.digitalocean.com/community/tutorials/how-to-create-a-django-app-and-connect-it-to-a-database
+# https://www.mycli.net/config
