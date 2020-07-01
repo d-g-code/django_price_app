@@ -60,3 +60,7 @@ table {
     border: 0;
     text-align: left;
 }
+td {
+    width: 33%;
+    text-align: center;
+}
