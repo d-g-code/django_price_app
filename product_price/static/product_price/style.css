@@ -23,6 +23,9 @@ body {
     font-size: 1.5em;
     border-radius: 30px;
 }
+.nev {
+    width: 100%;
+}
 .nav a{
     display: block;
     padding: 24px;
