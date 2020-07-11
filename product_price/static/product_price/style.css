@@ -57,14 +57,20 @@ body {
     margin: 0;
     padding: 0;
 }
-table {
-    width: 99%;
-    margin: 0;
-    padding: 0px;
-    border: 0;
-    text-align: left;
+.container {
+    width: 100%;
+    float: left;
 }
-td {
-    width: 33%;
-    text-align: center;
+.d_product {
+    width: 72%;
+    float: left;
+}
+.d_price {
+    width: 15%;
+    float: left;
+    text-align: right;
+}
+.d_store {
+    width: 12%;
+    float: left;
 }
