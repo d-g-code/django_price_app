@@ -1,12 +1,12 @@
-from django.shortcuts import render, HttpResponseRedirect, reverse
-from .models import Product
+from django.shortcuts import render
+from .models import Product, Store
 from django.contrib.auth.forms import UserCreationForm
-from .forms import AddProductForms, SearchForm, MyUserCreationForm
+from .forms import AddProductForms
 from django.contrib import messages
 
 
 def index_product(request):
-    all_products = Product.objects.order_by('name')
+    all_products = Product.objects.order_by('product')
     return render(request, 'product_price/product.html', {'all_products': all_products})
 
 
@@ -28,11 +28,6 @@ def add_product(request):
         form = AddProductForms()
         messages.success(request, f'Artykuł dodany')
         return render(request, 'product_price/add_product.html', {'form': form})
-
     return render(request, 'product_price/add_product.html', {'form': form})
 
-
-def search_form(request):
-    form = MyUserCreationForm()
-    return render(request, 'product_price/search_form.html', {'form': form})
 

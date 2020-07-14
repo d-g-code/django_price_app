@@ -1,21 +1,17 @@
 {% extends "product_price/layout.html" %}
 
-    <title>Index_info</title>
+    <title>Products</title>
 
 {% block content %}
 
-    {% if all_products %}
-        {% for product in all_products %}
-            <table cellpadding="0" cellspacing="0">
-                <tbody>
-                    <tr>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                </tbody>
-            </table> {{ product }} {{ product.price }} {{ product.store }}
-        {% endfor %}
-    {% endif %}
+                {% if all_products %}
+                {% for product in all_products %}
+                <div class="container">
+                    <div class="d_product">{{ product.product }}</div>
+                    <div class="d_price">{{ product.price }}</div>
+                    <div class="d_store">|{{ product.product_store }}</div>
+                </div>
+                {% endfor %}
+                {% endif %}
 
 {% endblock content %}

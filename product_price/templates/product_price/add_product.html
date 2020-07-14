@@ -15,12 +15,10 @@
 
     <form method="POST">
         {% csrf_token %}
-
-        <input id="id_name" type="text" name="name" placeholder="Product">
-        <input id="id_price" type="number" name="price" placeholder="Price">
-        <input id="id_store" type="text" name="store" placeholder="Store">
+        {{ form.product }}
+        {{ form.price }}
+        {{ form.product_store }}
         <input class="button" type="submit" name="" value="Add Product">
-
     </form>
     <br>
     {% if messages %}

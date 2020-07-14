@@ -3,9 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background: #bdc;
-    font-size: 4em;
+    font-size: 2em;
 }
-#id_username, #id_password, #id_password1, #id_password2, #id_name, #id_price, #id_store{
+#id_username, #id_password, #id_password1, #id_password2, #id_product, #id_price, #id_product_store{
     width: 90%;
     color: #33363C;
     background: #bbb;
@@ -23,7 +23,11 @@ body {
     font-size: 1.5em;
     border-radius: 30px;
 }
+.nev {
+    width: 100%;
+}
 .nav a{
+    width: 100%;
     display: block;
     padding: 24px;
     border-bottom: 1px solid rgba( 255, 255, 255, 0.1 );
@@ -53,9 +57,20 @@ body {
     margin: 0;
     padding: 0;
 }
-table {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    text-align: inheritce ;
+.container {
+    width: 100%;
+    float: left;
+}
+.d_product {
+    width: 72%;
+    float: left;
+}
+.d_price {
+    width: 15%;
+    float: left;
+    text-align: right;
+}
+.d_store {
+    width: 12%;
+    float: left;
 }
