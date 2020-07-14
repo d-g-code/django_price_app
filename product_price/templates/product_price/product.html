@@ -5,11 +5,11 @@
 {% block content %}
 
                 {% if all_products %}
-                {% for product in all_products %}
+                {% for p in all_products %}
                 <div class="container">
-                    <div class="d_product">{{ product.product }}</div>
-                    <div class="d_price">{{ product.price }}</div>
-                    <div class="d_store">|{{ product.product_store }}</div>
+                    <div class="d_product">{{ p.product }}</div>
+                    <div class="d_price">{{ p.price }}</div>
+                    <div class="d_store">|{{ p.product_store }}</div>
                 </div>
                 {% endfor %}
                 {% endif %}
