@@ -6,7 +6,7 @@ from django.contrib import messages
 
 
 def index_product(request):
-    all_products = Product.objects.order_by('product')
+    all_products = Product.objects.all()
     return render(request, 'product_price/product.html', {'all_products': all_products})
 
 
