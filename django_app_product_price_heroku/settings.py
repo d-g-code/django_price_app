@@ -126,7 +126,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'product_price:index_product'
 LOGIN_URL = 'product_price:login'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join('product_price/static')
 ]
 # Activate Django-Heroku.
 django_heroku.settings(locals())
