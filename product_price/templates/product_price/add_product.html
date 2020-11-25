@@ -9,24 +9,27 @@
 </head>
 <body>
 
-    <p class="title-product">Add Product</p>
-    <a href="{% url 'product_price:index_product' %}">Home</a>
-    <br>
+    <div class="nav">
+        <a href="{% url 'product_price:index_product' %}">Home</a>
+    </div>
 
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.product }}
-        {{ form.price }}
-        {{ form.product_kind }}
-        {{ form.product_store }}
-        <input class="button" type="submit" name="" value="Add Product">
-    </form>
-    <br>
-    {% if messages %}
+    <div class="message">
+        {% if messages %}
         {% for message in messages %}
             {{ message }}
         {% endfor %}
+    </div>
+
     {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+            {{ field }}
+        {% endfor %}
+        <input class="button" type="submit" name="" value="Add Product">
+    </form>
+    <br>
+
 
 </body>
 </html>

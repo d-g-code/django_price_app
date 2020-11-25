@@ -11,8 +11,8 @@
 
         {% if user.is_authenticated %}
             <div class="nav">
-            <a href="{% url 'product_price:add_product' %}">Dodaj Produkt</a>
-            <a href="{% url 'product_price:logout' %}">Wyloguj</a>
+                <a href="{% url 'product_price:add_product' %}">Dodaj Produkt</a>
+                <a href="{% url 'product_price:logout' %}">Wyloguj</a>
             </div>
             {% block content %}{% endblock%}
 
