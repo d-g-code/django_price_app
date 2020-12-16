@@ -3,6 +3,8 @@ from .models import Product, Store
 from django.contrib.auth.forms import UserCreationForm
 from .forms import AddProductForms
 from django.contrib import messages
+from django.core import serializers
+from django.http import HttpResponse
 
 
 def index_product(request):
@@ -29,3 +31,9 @@ def add_product(request):
         messages.success(request, f'Artykuł dodany')
         return render(request, 'product_price/add_product.html', {'form': form})
     return render(request, 'product_price/add_product.html', {'form': form})
+
+
+def getdata(request):
+    results = Product.objects.all()
+    jsondata = serializers.serialize('json', results)
+    return HttpResponse(jsondata)
