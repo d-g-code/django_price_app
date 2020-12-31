@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #33363C;
+    height: 100vh;
+    background: linear-gradient(rgb(60,60,60), rgb(50,180,90), rgb(40,40,40));
+    font-size: 1em;
+}
+.form-login {
+    position: relative;
+    margin: auto;
+    width: 20%;
+    top: 100px;
+    display: grid;
+    grid-auto-rows: 50px;
+    gap: 20px;
+}
+.form-login input {
+    text-align: center;
+}
