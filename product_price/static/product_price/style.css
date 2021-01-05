@@ -9,7 +9,6 @@ body {
     height: 100vh;
     padding: 0;
     background: linear-gradient(rgb(47,150,163), rgb(48, 120, 143));
-    font-size: 2em;
 }
 #id_username, #id_password, #id_password1, #id_password2, #id_product, #id_price, #id_product_kind, #id_product_store {
     width: 90%;
