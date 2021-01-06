@@ -1,15 +1,13 @@
+<!DOCTYPE html>
 {% load crispy_forms_tags %}
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Signup</title>
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'product_price/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'product_price/style.css' %}">
 </head>
 <body>
-
     <form method="POST">
         {% csrf_token %}
         <input id="id_username" type="text" name="username" placeholder="Username">
@@ -17,6 +15,5 @@
         <input id="id_password2" type="password" name="password2" placeholder="Password">
         <input class="button" type="submit" value="Signup">
     </form>
-
 </body>
 </html>

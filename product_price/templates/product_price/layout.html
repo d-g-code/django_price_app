@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 {% load pwa %}
 {% load static %}
+{% progressive_web_app_meta %}
 <html lang="en">
 <head>
-    {% progressive_web_app_meta %}
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'product_price/style.css' %}">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Price</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'product_price/style.css' %}">
 </head>
 <body>
-
         {% if user.is_authenticated %}
             <div class="nav">
                 <a href="{% url 'product_price:add_product' %}">Dodaj Produkt</a>
                 <a href="{% url 'product_price:logout' %}">Wyloguj</a>
             </div>
             {% block content %}{% endblock%}
-
         {% else %}
             <div class="nav">
                 <a href="{% url 'product_price:login' %}">Zaloguj</a>
                 <a href="{% url 'product_price:signup' %}">Rejestracja</a>
             </div>
         {% endif %}
-
-
-
-
 </body>
 </html>

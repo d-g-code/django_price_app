@@ -1,9 +1,6 @@
 {% extends "product_price/layout.html" %}
-
     <title>Products</title>
-
 {% block content %}
-
         {% if all_products %}
         {% for product in all_products %}
         <div class="container">
@@ -14,5 +11,4 @@
         </div>
         {% endfor %}
         {% endif %}
-
 {% endblock content %}

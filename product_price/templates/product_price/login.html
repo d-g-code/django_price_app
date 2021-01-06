@@ -1,20 +1,17 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'product_price/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'product_price/main.css' %}">
 </head>
 <body>
-
     <form method="POST" class="form-login" >
         {% csrf_token %}
         <input id="id_username" type="text" name="username" placeholder="Username">
         <input id="id_password" type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
+        <input id="login_button" type="submit" value="Login">
     </form>
-
 </body>
 </html>

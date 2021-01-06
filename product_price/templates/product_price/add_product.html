@@ -5,21 +5,17 @@
     <meta charset="UTF-8">
     <title>Add Product</title>
     <link rel="stylesheet" type="text/css" href="{% static 'product_price/style.css' %}">
-
 </head>
 <body>
-
     <div class="nav">
         <a href="{% url 'product_price:index_product' %}">Home</a>
     </div>
-
     <div class="message">
         {% if messages %}
         {% for message in messages %}
             {{ message }}
         {% endfor %}
     </div>
-
     {% endif %}
     <form method="POST">
         {% csrf_token %}
@@ -29,7 +25,5 @@
         <input class="button" type="submit" name="" value="Add Product">
     </form>
     <br>
-
-
 </body>
 </html>
