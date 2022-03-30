@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'product_price.apps.ProductPriceConfig',
     'crispy_forms',
     'pwa',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [

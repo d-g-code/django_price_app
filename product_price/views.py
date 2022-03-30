@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from .models import Product, Store
+from .models import Product, Store, Kind
 from django.contrib.auth.forms import UserCreationForm
 from .forms import AddProductForms
 from django.contrib import messages
-
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import StoreSerializer, KindSerializer, ProductSerializer
 
 def index_product(request):
     all_products = Product.objects.all()
@@ -29,3 +31,29 @@ def add_product(request):
         messages.success(request, f'Artykuł dodany')
         return render(request, 'product_price/add_product.html', {'form': form})
     return render(request, 'product_price/add_product.html', {'form': form})
+
+
+@api_view(['GET'])
+def store_collection(request):
+    if request.method == 'GET':
+        stores = Store.objects.all()
+        print(stores)
+        serializer = StoreSerializer(stores, many=True)
+        return Response(serializer.data)
+
+
+@api_view(['GET'])
+def kind_collection(request):
+    if request.method == 'GET':
+        kind = Kind.objects.all()
+        serializer = KindSerializer(kind, many=True)
+        return Response(serializer.data)
+
+
+@api_view(['GET'])
+def product_collection(request):
+    if request.method == 'GET':
+        product = Product.objects.all()
+        serializer = ProductSerializer(product, many=True)
+        print(product)
+        return Response(serializer.data)

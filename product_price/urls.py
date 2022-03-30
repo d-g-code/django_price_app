@@ -9,4 +9,9 @@ urlpatterns = [
     path('add', views.add_product, name='add_product'),
     path('login/', auth_views.LoginView.as_view(template_name='product_price/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='product_price/logout.html'), name='logout'),
+
+    # api
+    path(r'api/store', views.store_collection, name='store_collection'),
+    path(r'api/kind', views.kind_collection, name='kind_collection'),
+    path(r'api/product', views.product_collection, name='product_collection'),
 ]
