@@ -21,7 +21,11 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2, default='')
     product_kind = models.ForeignKey(Kind, on_delete=models.CASCADE)
     product_store = models.ForeignKey(Store, on_delete=models.  CASCADE)
-    product_data = models.DateTimeField(timezone.now(), default=timezone.now())
+    product_data = models.DateTimeField(default=timezone.now)
+
+    def was_added(self):
+        date_today = str(self.product_data)[8:10] + str(self.product_data)[4:8] + str(self.product_data)[0:4]
+        return date_today
 
     def __str__(self):
         return self.product

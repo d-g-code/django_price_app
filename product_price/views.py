@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import StoreSerializer, KindSerializer, ProductSerializer
 
+
 def index_product(request):
     all_products = Product.objects.all()
     return render(request, 'product_price/product.html', {'all_products': all_products})
