@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     grid-template-columns: auto 10% 5% 5%;
 }
-.d_product_kind, .d_price, .d_store {
+.d_product_kind, .d_price, .d_store, d_date{
     display: grid;
     justify-items: center;
 }

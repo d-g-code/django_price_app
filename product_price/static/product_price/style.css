@@ -67,19 +67,24 @@ body {
     float: left;
 }
 .d_product {
-    width: 68%;
+    width: 77%;
     float: left;
+    padding-left: 5px;
 }
 .d_price {
-    width: 15%;
+    width: 4%;
     float: left;
     text-align: right;
 }
 .d_store {
-    width: 12%;
+    width: 6%;
+    float: left;
+}
+.d_date {
+    width: 6%;
     float: left;
 }
 .d_product_kind {
-    width: 4%;
+    width: 6%;
     float: left;
 }
