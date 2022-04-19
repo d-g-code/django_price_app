@@ -19,7 +19,11 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, 'product_price/product.html')
+            messages.success(request, 'Signup successfully.')
+            return render(request, 'product_price/signup_success.html')
+        else:
+            messages.error(request, 'Invalid signup.')
+            return render(request, 'product_price/signup.html', {'form': form})
     else:
         form = UserCreationForm()
         return render(request, 'product_price/signup.html', {'form': form})

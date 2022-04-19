@@ -8,6 +8,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'product_price/style.css' %}">
 </head>
 <body>
+        {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+        {% endif %}
     <form method="POST">
         {% csrf_token %}
         <input id="id_username" type="text" name="username" placeholder="Username">
